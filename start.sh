@@ -1,6 +1,7 @@
 modprobe v4l2_common && python demo.py &
 cd /data
 #python -m SimpleHTTPServer 80
+touch ./image.jpg
 inotifywait -r -m -e modify ./image.jpg |
    while read path _ file; do
        echo $path$file modified
