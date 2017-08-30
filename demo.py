@@ -15,4 +15,6 @@ with picamera.PiCamera() as camera:
         try:
             files = {'image': open('/data/image.jpg', 'rb')}
             r = requests.post(os.environ['REMOTE_URL'], files=files)
+        except Exception as e:
+            print(e)
         time.sleep(3)
