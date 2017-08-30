@@ -10,7 +10,7 @@ with picamera.PiCamera() as camera:
     time.sleep(1)
     camera.resolution = (1920, 1080)
     while True:
-        camera.capture('/data/image.jpg')
+        camera.capture('/data/image.jpg', quality=50)
 
         try:
             files = {'image': open('/data/image.jpg', 'rb')}
