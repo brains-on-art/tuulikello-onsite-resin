@@ -8,9 +8,9 @@ import requests
 with picamera.PiCamera() as camera:
     # Camera warm-up time
     time.sleep(1)
-    camera.resolution = (1920, 1080)
+    # camera.resolution = (1920, 1080)
     while True:
-        camera.capture('/data/image.jpg', quality=50)
+        camera.capture('/data/image.jpg', quality=10)
 
         try:
             files = {'image': open('/data/image.jpg', 'rb')}
