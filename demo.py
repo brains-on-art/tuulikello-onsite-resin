@@ -5,7 +5,7 @@ import time
 import picamera
 import requests
 
-with picamera.PiCamera() as camera:
+with picamera.PiCamera(sensor_mode=2, resolution=(3280,2464)) as camera:
     # Camera warm-up time
     time.sleep(1)
     # camera.resolution = (1920, 1080)
